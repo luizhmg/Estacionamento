@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <title>lista</title>
+</head>
+<body>
+    <div>
+        <h1>Olá {{ nome }}</h1>
+
+        <button type="submit"><a href="{{ url_for('cadastro_cliente') }}">Cadastrar novo cliente</a></button>
+
+        <button type="submit"><a href="{{ url_for('cadastro_funcionario') }}">Cadastrar novo Funcionario</a></button>
+
+        <button type="submit"><a href="{{ url_for('retirar') }}">Retirar Veiculo</a></button>
+        <br><br>
+
+        <button type="submit"><a href="{{ url_for('logout_funcionario') }}">Fazer logout do funcionario {{ nome }}</a></button>
+    </div>
+</body>
+</html>

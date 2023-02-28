@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <title>Cadastro Funcionario</title>
+</head>
+<body>
+    <form action="" method="post">
+        <h1>Cadastro de Funcionario</h1>
+        <fieldset>
+
+            <label><b>Nome</b></label>
+            <input type="text" name="nome"><br>
+
+            <label><b>CPF</b></label>
+            <input type="number" name="cpf"><br>
+
+            <label><b>Senha</b></label>
+            <input type="password" name="senha"><br>
+
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>

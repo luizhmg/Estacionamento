@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <title>Dados para retirada</title>
+</head>
+<body>
+    <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+            </thead>
+            <tbody>
+                <form action="" method="post">
+                    <div>
+                        {% for vaga in veiculo %}
+                            <tr>
+                                <td>{{ valor_estadia }}</td>
+                                <td>{{ vaga['marca'] }}</td>
+                                <td>{{ vaga['modelo'] }} - </td>
+                                <td>({{ vaga['cor'] }})</td>
+                                <td>{{ vaga['bloco'] }}</td>
+                                <td>{{ vaga['andar'] }}</td>
+                                <td>{{ vaga['seçao'] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        {% for pessoa in motorista %}
+                            <tr>
+                                <td>{{ pessoa['nome'] }}</td>
+                                <td>{{ pessoa['cpf'] }}</td>
+                                <td><button type="submit">Retire este veiculo Aqui!!</button></td>
+                                <input name="id_proprietario" value="{{ pessoa['id'] }}" type="hidden"></input>
+                            </tr>
+                        {% endfor %}
+                    </div>
+                </form>
+            </tbody>
+    </table>>
+</body>
+</html>

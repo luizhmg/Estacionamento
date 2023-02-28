@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <title>Estacionar Veiculo</title>
+</head>
+<body>
+    <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>Seção</th>
+                    <th>Numero</th>
+                    <th>Andar</th>
+                    <th>Bloco</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Placa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <div>
+                    {% for vaga in vagas  %}
+                        <tr>
+                            <form action="/Retirar Veiculo" method="post">
+                                <td>{{ vaga['seçao'] }}</td>
+                                <td>{{ vaga['numero'] }}</td>
+                                <td>{{ vaga['andar'] }}</td>
+                                <td>{{ vaga['bloco'] }}</td>
+                                <td>{{ vaga['marca'] }}</td>
+                                <td>{{ vaga['modelo'] }}</td>
+                                <td>{{ vaga['placa'] }}</td>
+                                <td><button type="submit">Retire este veiculo Aqui!!</button></td>
+                                <input name="id_veiculo" value="{{ vaga['idveiculo'] }}" type="hidden"></input>
+                            </form>
+                        </tr>
+                    {% endfor %}
+                </div>
+            </tbody>
+    </table>>
+</body>
+</html>

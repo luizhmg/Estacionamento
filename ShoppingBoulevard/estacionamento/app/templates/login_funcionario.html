@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <title>Login Funcionario</title>
+</head>
+<body>
+    <form action="/login" method="post">
+        <h1><b>Login do Funcionario</b></h1>
+
+        <label><b>CPF</b></label>
+        <input type="text" name="cpf"><br>
+
+        <label><b>Senha</b></label>
+        <input type="password" name="senha"><br>
+
+        <button type="submit"><b>Enviar</b></button>
+    </form>
+</body>
+</html>

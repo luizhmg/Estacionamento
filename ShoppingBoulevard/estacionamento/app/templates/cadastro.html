@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <title>{{ titulo }}</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+        <h1>Cadastro de Cliente</h1>
+        <div>
+            <label for="nome"><b>Nome</b></label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label for="CPF"><b>CPF</b></label>
+            <input type="int" name="cpf">
+        </div>
+        </fieldset>
+        <fieldset>
+        <h1>Cadastro de Veiculo</h1>
+
+        <div>
+            <label for="marca"><b>Marca</b></label>
+            <input type="text" name="marca">
+        </div>
+
+        <div>
+            <label for="modelo"><b>Modelo</b></label>
+            <input type="text" name="modelo">
+        </div>
+
+        <div>
+            <label for="cor"><b>Cor</b></label>
+            <input type="text" name="cor">
+        </div>
+
+        <div>
+            <label for="placa"><b>Placa</b></label>
+            <input type="text" name="placa">
+        </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <label>Tipo de Veiculo:</label>
+                <select name="tipo_veiculo">
+                    <option>carro</option>
+                    <option>moto</option>
+                    <option>PCD</option>
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
+        </fieldset>
+
+
+    </form>
+
+</body>
+</html>
